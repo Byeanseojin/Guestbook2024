@@ -1,17 +1,15 @@
 package kr.ac.kopo.guestbook2024.entity;
-
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+import org.springframework.web.ErrorResponse;
 
 @Entity
 @Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class GuestBook extends BaseEntity{
+public class Guestbook extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long gno;
@@ -25,4 +23,11 @@ public class GuestBook extends BaseEntity{
     @Column(length = 50, nullable = false)
     private String writer;
 
+    public void changeTitle(String title){
+        this.title = title;
+    }
+
+    public void changeContent(String content){
+        this.content = content;
+    }
 }
