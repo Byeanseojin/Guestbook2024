@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        queryDslVersion = "5.0.0"
+        queryDslVersion = "5.0.0" //버전선언
     }
 }
 
@@ -36,7 +36,7 @@ dependencies {
     runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}:jakarta"
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}:jakarta" //${queryDslVersion} 버전 추가 ,queryDslVersion = "5.0.0"
 
     annotationProcessor(
 
