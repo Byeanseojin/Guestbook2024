@@ -90,6 +90,13 @@
     scroll-behavior: smooth;
   }
 }
+/*추가한 CSS*/
+.form-group{
+  margin: 10px;
+}
+.btn btn-primary form-group{
+  margin-left: 5px;
+}
 
 body {
   margin: 0;
